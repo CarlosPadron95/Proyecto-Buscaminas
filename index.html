@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Buscaminas</h1>
+
+      <div class="controls">
+        <select id="difficulty">
+          <option value="8-10">Fácil (8x8 - 10 minas)</option>
+          <option value="12-25">Medio (12x12 - 25 minas)</option>
+          <option value="16-40">Difícil (16x16 - 40 minas)</option>
+        </select>
+        <button id="reset-btn">Nuevo Juego</button>
+      </div>
+
+      <div class="stats">
+        <span>Minas: <span id="mine-count">0</span></span>
+        <span>Tiempo: <span id="timer">0</span>s</span>
+      </div>
+
+      <div id="board" class="board"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

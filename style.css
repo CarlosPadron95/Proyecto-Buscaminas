@@ -1,0 +1,70 @@
+:root {
+  --bg-color: #f0f0f0;
+  --cell-size: 35px;
+  --border-dark: #7b7b7b;
+  --border-light: #ffffff;
+}
+
+body {
+  background-color: #2c3e50;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  background-color: #bdbdbd;
+  padding: 15px;
+  border: 4px ridge var(--border-light);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  border: 3px inset var(--border-dark);
+  background-color: var(--border-dark);
+  margin-top: 15px;
+  /* Las columnas se definen en JS */
+}
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 3px outset var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+  user-select: none; /* Evita que se seleccione el texto al hacer click */
+}
+
+/* Estado de celda abierta */
+.cell.revealed {
+  border: 1px solid #7b7b7b;
+  background-color: #d1d1d1;
+  cursor: default;
+}
+
+.cell.mine {
+  background-color: #e74c3c;
+}
+.cell.flag {
+  background-color: #f1c40f;
+}
+
+/* Colores para los números */
+.n-1 {
+  color: blue;
+}
+.n-2 {
+  color: green;
+}
+.n-3 {
+  color: red;
+}
